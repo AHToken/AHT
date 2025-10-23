@@ -3,86 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algorand Hodl - Investment DAO</title>
+    <!-- Changed Title -->
+    <title>Algorand Hodl DAO - Community Investment Portfolio</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        /* Estilo para la fuente Inter */
+        body {
+            font-family: 'Inter', sans-serif;
         }
-        .glassy-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Pequeño degradado para el héroe */
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 0%, rgba(14, 116, 144, 0.15), transparent 40%);
         }
     </style>
 </head>
-<body class="gradient-bg text-white min-h-screen flex flex-col">
-    <div class="absolute inset-0 opacity-10">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
-            <defs>
-                <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
-                    <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-    </div>
+<body class="bg-gray-900 text-white">
 
-    <div class="relative z-10 container mx-auto px-4 py-8">
-        <header class="text-center mb-16">
-            <h1 class="text-5xl font-extralight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-4">
-                Algorand Hodl
-            </h1>
-            <p class="text-xl max-w-2xl mx-auto text-gray-300 font-light">
-                Collective Investment. Transparent Decisions. Shared Future.
+    <!-- Header / Navegación -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Icono Simple (Puedes reemplazarlo por un SVG o IMG de tu logo) -->
+                <svg class="w-8 h-8 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+                </svg>
+                <span class="text-2xl font-bold text-white">Algorand Hodl</span>
+            </div>
+            <!-- Translated Nav Links -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="text-gray-300 hover:text-white transition">About Us</a>
+                <a href="#tokenomics" class="text-gray-300 hover:text-white transition">Tokenomics</a>
+                <a href="#community" class="text-gray-300 hover:text-white transition">Community</a>
+                <a href="https://docs.algorandhodl.xyz/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition">Docs</a>
+            </div>
+            <!-- Translated Button -->
+            <a href="https://vestige.fi/" target="_blank" rel="noopener noreferrer" class="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-5 rounded-lg transition shadow-md">
+                Buy $AHT
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Sección Hero -->
+        <section id="home" class="py-24 md:py-32 relative overflow-hidden hero-gradient">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Translated Hero Text -->
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                    A <span class="text-cyan-400">DAO-Governed</span> Investment Portfolio
+                </h1>
+                <p class="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+                    We are all owners of the portfolio and decide what to invest in.
+                    Join an experimental community focused on the long-term growth of the Algorand ecosystem.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <!-- Translated Buttons -->
+                    <a href="https://vestige.fi/" target="_blank" rel="noopener noreferrer" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition shadow-lg">
+                        Buy $AHT
+                    </a>
+                    <a href="https://docs.algorandhodl.xyz/" target="_blank" rel="noopener noreferrer" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
+                        Read Docs
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Nosotros (Compacta) -->
+        <section id="about" class="py-20 bg-gray-950">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <!-- Translated About Text -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold">What is Algorand Hodl DAO?</h2>
+                    <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+                        We are a DAO focused on funding a treasury that invests in the Algorand ecosystem, with a focus on promising medium and long-term projects.
+                    </p>
+                </div>
+                
+                <!-- Puntos Clave -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                        <svg class="w-12 h-12 text-cyan-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                        </svg>
+                        <!-- Translated Card Text -->
+                        <h3 class="text-xl font-semibold mb-2">Community Governance</h3>
+                        <p class="text-gray-400">
+                            Every $AHT owner has voting power to propose and decide on treasury investments.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                        <svg class="w-12 h-12 text-cyan-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639l4.25-8.5a1.125 1.125 0 011.913 0l4.25 8.5a1.012 1.012 0 010 .639l-4.25 8.5a1.125 1.125 0 01-1.913 0l-4.25-8.5z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12.036 12.322a1.012 1.012 0 010-.639l4.25-8.5a1.125 1.125 0 011.913 0l4.25 8.5a1.012 1.012 0 010 .639l-4.25 8.5a1.125 1.125 0 01-1.913 0l-4.25-8.5z" />
+                        </svg>
+                        <!-- Translated Card Text -->
+                        <h3 class="text-xl font-semibold mb-2">Full Transparency</h3>
+                        <p class="text-gray-400">
+                            All decisions and portfolio movements are public and traceable on the blockchain.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                        <svg class="w-12 h-12 text-cyan-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                        </svg>
+                        <!-- Translated Card Text -->
+                        <h3 class="text-xl font-semibold mb-2">Sustainable Growth</h3>
+                        <p class="text-gray-400">
+                            We focus on long-term sustainability and proper risk management for the treasury.
+                        </p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                        <svg class="w-12 h-12 text-cyan-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+                        </svg>
+                        <!-- Translated Card Text -->
+                        <h3 class="text-xl font-semibold mb-2">Shared Benefits</h3>
+                        <p class="text-gray-400">
+                            $AHT holders share in profits and losses. We offer profit sharing, buybacks, and more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Tokenomics -->
+        <section id="tokenomics" class="py-20">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold">Tokenomics $AHT</h2>
+                    <p class="mt-4 text-lg text-gray-400">Ticker: AHT | Total: 3,200,000,000</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    
+                    <!-- Distribución -->
+                    <div>
+                        <!-- Translated Title -->
+                        <h3 class="text-2xl font-semibold mb-6">Token Distribution</h3>
+                        <div class="space-y-4">
+                            <!-- Tesorería -->
+                            <div class="bg-gray-800 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-1">
+                                    <!-- Translated Label -->
+                                    <span class="text-lg font-medium">Treasury</span>
+                                    <span class="text-lg font-bold text-cyan-400">85.5%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="bg-cyan-500 h-2.5 rounded-full" style="width: 85.5%"></div>
+                                </div>
+                                <!-- Translated Description -->
+                                <p class="text-sm text-gray-400 mt-2">2,736,000,000 AHT | 50-year lock (1% annual unlock)</p>
+                            </div>
+                            <!-- Equipo -->
+                            <div class="bg-gray-800 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-1">
+                                    <!-- Translated Label -->
+                                    <span class="text-lg font-medium">Team</span>
+                                    <span class="text-lg font-bold text-teal-400">10%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="bg-teal-500 h-2.5 rounded-full" style="width: 10%"></div>
+                                </div>
+                                <!-- Translated Description -->
+                                <p class="text-sm text-gray-400 mt-2">320,000,000 AHT | 5-year lock (monthly release)</p>
+                            </div>
+                            <!-- Otros -->
+                            <div class="bg-gray-800 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-1">
+                                    <!-- Translated Label -->
+                                    <span class="text-lg font-medium">Reserve, Liquidity & Seed</span>
+                                    <span class="text-lg font-bold text-emerald-400">~4.5%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                    <div class="bg-emerald-500 h-2.5 rounded-full" style="width: 4.5%"></div>
+                                </div>
+                                <!-- Translated Description -->
+                                <p class="text-sm text-gray-400 mt-2">~152,000,000 AHT | Details in the documentation.</p>
+                            </div>
+                        </div>
+                        <!-- Translated Button -->
+                        <a href="https://vestige.fi/vault/1364074594" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition">
+                            View Lock Vault (Vestige)
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline-block ml-1">
+                                <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M6.19 14.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 000-1.06L9.81 3.19a.75.75 0 10-1.06 1.06L12.44 8l-6.25 6.25a.75.75 0 000 1.06z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Utilidad del Token y Transparencia -->
+                    <div class="space-y-8">
+                        <div>
+                            <!-- Translated Title -->
+                            <h3 class="text-2xl font-semibold mb-4">$AHT Token Utility</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <!-- Translated List Items -->
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-cyan-400 mr-2 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+                                    <span>Access to DAO governance (proposals and votes).</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-cyan-400 mr-2 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+                                    <span>Receive a share of the organization's profits (dividends, buybacks).</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-cyan-400 mr-2 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+                                    <span>Rewards for staking and participation.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Transparencia - Billeteras -->
+                        <div>
+                            <!-- Translated Title -->
+                            <h3 class="text-2xl font-semibold mb-4">Transparency: Wallets</h3>
+                            <div class="bg-gray-950 border border-gray-700 p-4 rounded-lg text-sm text-gray-300 font-mono space-y-2 overflow-x-auto">
+                                <!-- Translated Labels -->
+                                <p><span class="text-cyan-400">1. Treasury:</span> 3JOK...FIMQPE</p>
+                                <p><span class="text-cyan-400">2. LP Lock:</span> ZPRQ...VC3NVQ</p>
+                                <p><span class="text-cyan-400">3. Team:</span> FOW5...CYPACA, JJVB...63TBY</p>
+                                <p><span class="text-cyan-400">4. Reserve:</span> 7IFQ...5CKT2A</p>
+                                <p><span class="text-cyan-400">5. Multi-Sig (2/3):</span> LRS2...KA3B4</p>
+                                <p><span class="text-cyan-400">6. Multi-Sig (1/3):</span> KOJJ...K5HFW4</p>
+                            </div>
+                            <!-- Translated Note -->
+                            <p class="text-xs text-gray-500 mt-2">Full addresses available in our documentation.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Comunidad / CTA Final -->
+        <section id="community" class="py-24 bg-gray-950 hero-gradient">
+            <div class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Translated CTA Text -->
+                <h2 class="text-4xl md:text-5xl font-extrabold">
+                    Join the Adventure
+                </h2>
+                <p class="mt-6 text-xl text-gray-300">
+                    At Algorand Hodl, the community is the foundation. You have the power to make decisions and be part of a peer-to-peer investment. Help drive the growth of the shared treasury.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <!-- Translated Buttons -->
+                    <a href="https://t.me/algorandhodl" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition shadow-lg inline-flex items-center justify-center">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 11.9c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.3 1.29.27 1.07.99l-2.54 12.08c-.24.97-1.04 1.21-1.81.73l-5.32-3.92l-2.51 2.41c-.28.28-.53.53-.9.53z"></path></svg>
+                        Join Telegram
+                    </a>
+                    <a href="https://docs.algorandhodl.xyz/" target="_blank" rel="noopener noreferrer" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
+                        Read Docs
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div>
+                <span class="text-xl font-bold">Algorand Hodl DAO</span>
+                <!-- Translated Footer Text -->
+                <p class="text-gray-400 mt-1">A community-governed investment portfolio.</p>
+            </div>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="https://t.me/algorandhodl" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                    <span class="sr-only">Telegram</span>
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 11.9c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.3 1.29.27 1.07.99l-2.54 12.08c-.24.97-1.04 1.21-1.81.73l-5.32-3.92l-2.51 2.41c-.28.28-.53.53-.9.53z"></path></svg>
+                </a>
+                <a href="https://docs.algorandhodl.xyz/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                    <!-- Translated Screen Reader Text -->
+                    <span class="sr-only">Documentation</span>
+                    <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
+                </a>
+            </div>
+        </div>
+        <div class="bg-gray-900 py-4">
+            <!-- Translated Copyright -->
+            <p class="text-center text-gray-500 text-sm">
+                © 2024 Algorand Hodl DAO. All rights reserved.
             </p>
-        </header>
+        </div>
+    </footer>
 
-        <main class="space-y-12">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glassy-card p-6 rounded-xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-3xl">
-                    <div class="text-4xl mb-4 text-blue-400">→</div>
-                    <h2 class="text-2xl font-semibold mb-4 text-white">Community</h2>
-                    <p class="text-gray-300 font-light">
-                        Each $AHT token is a vote. You define the path of our collective investment.
-                    </p>
-                </div>
-                <div class="glassy-card p-6 rounded-xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-3xl">
-                    <div class="text-4xl mb-4 text-green-400">↔</div>
-                    <h2 class="text-2xl font-semibold mb-4 text-white">Transparency</h2>
-                    <p class="text-gray-300 font-light">
-                        Real-time information. Every decision, completely traceable and open.
-                    </p>
-                </div>
-                <div class="glassy-card p-6 rounded-xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-3xl">
-                    <div class="text-4xl mb-4 text-purple-400">↑</div>
-                    <h2 class="text-2xl font-semibold mb-4 text-white">Benefits</h2>
-                    <p class="text-gray-300 font-light">
-                        Dividends, rewards, and shared growth in the Algorand ecosystem.
-                    </p>
-                </div>
-            </div>
-
-            <div class="text-center space-x-4">
-                <a href="https://app.tinyman.org/swap?asset_in=0&asset_out=1045677043&use_router=true" target="_blank" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                    Buy AHT
-                </a>
-                <a href="https://t.me/algorandhodl" target="_blank" class="inline-block border border-white/20 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-white/10 transition duration-300 transform hover:scale-105">
-                    Telegram
-                </a>
-                <a href="https://docs.algorandhodl.xyz" target="_blank" class="inline-block border border-white/20 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-white/10 transition duration-300 transform hover:scale-105">
-                    Docs
-                </a>
-            </div>
-        </main>
-
-        <footer class="text-center text-gray-500 mt-16 font-light">
-            <p>© 2024 Algorand Hodl. Experimental Investment Community.</p>
-            <div class="mt-4 space-x-4">
-                <a href="https://twitter.com/algorandhodl" target="_blank" class="text-gray-400 hover:text-white">Twitter</a>            
-            </div>
-        </footer>
-    </div>
 </body>
 </html>
+
